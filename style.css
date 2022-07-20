@@ -1,9 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -54,4 +58,109 @@ header {
 
 main {
   margin: 0px 120px;
+  display: flex;
+}
+
+.main-left {
+  background-color: #161616;
+  width: 300px;
+  height: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-left a {
+  display: block;
+  padding: 12px 18px;
+  color: #161616;
+  background-color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.main-left a:last-of-type {
+  margin-bottom: 0;
+  background-color: #dd0000;
+  color: white;
+}
+
+.main-right {
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.main-right .single-card img {
+  width: 100%;
+}
+
+.card-content {
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+}
+
+.main-right p.transfer {
+  padding: 5px 10px;
+  color: #161616;
+  border: 1px solid #161616;
+  border-radius: 10px;
+  width: fit-content;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.main-right h4 {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  color: #161616;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.main-right .card-bottom {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(22, 22, 22, 0.7);
+}
+
+footer {
+  background-color: #161616;
+  color: white;
+  margin-top: 130px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+footer h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+footer hr {
+  width: 70%;
+  background-color: white;
+}
+
+footer div {
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer div a {
+  color: white;
+  margin-right: 30px;
+}
+
+footer div a:last-of-type {
+  margin-right: 0px;
 }
