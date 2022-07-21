@@ -1,3 +1,5 @@
+/* common styles */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 body {
@@ -10,6 +12,7 @@ a {
   text-decoration: none;
 }
 
+/* header section styles */
 header {
   background-color: #161616;
   color: white;
@@ -88,6 +91,7 @@ header {
   height: 580px;
 }
 
+/* main section styles */
 main {
   margin: 0px 120px;
   display: flex;
@@ -168,7 +172,8 @@ main {
 .view-all-btn {
   background-color: #dd0000;
   color: white;
-  padding: 10px 18px;
+  width: 100px;
+  height: 35px;
   border: none;
   border-radius: 5px;
   font-weight: 600;
@@ -176,6 +181,7 @@ main {
   display: none;
 }
 
+/* footer styles */
 footer {
   background-color: #161616;
   color: white;
@@ -308,7 +314,7 @@ Tablet
   }
 
   .header-left h1 {
-    margin-top: 50px;
+    margin-top: 0px;
     font-size: 40px;
     line-height: 50px;
   }
@@ -322,10 +328,13 @@ Tablet
 
   .header-right {
     width: 40%;
+    display: flex;
+    align-items: center;
   }
 
   .header-right img {
     height: 335px;
+    width: 100%;
   }
 
   main {
@@ -358,8 +367,14 @@ Tablet
     grid-template-columns: 1fr 1fr;
   }
 
+  .main-right .single-card:last-of-type {
+    display: none;
+  }
+
   .view-all-btn {
     display: block;
+    grid-column: 1 / span 2;
+    margin: 0px auto;
   }
 }
 
