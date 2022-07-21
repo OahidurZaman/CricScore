@@ -11,7 +11,6 @@ a {
 }
 
 header {
-  height: 620px;
   background-color: #161616;
   color: white;
   display: flex;
@@ -38,11 +37,44 @@ header {
   line-height: 26px;
 }
 
+.btn-container {
+  position: relative;
+}
+
 .header-left button {
   background-color: #dd0000;
-  padding: 12px 18px;
+  width: 150px;
+  height: 50px;
   border-radius: 5px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-left button i {
+  margin-left: 10px;
+}
+
+/* animation */
+@keyframes animateBtn {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 20px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.header-left button:hover {
+  animation: animateBtn 0.3s ease;
 }
 
 .header-right {
@@ -83,8 +115,8 @@ main {
   font-weight: 500;
 }
 
-.main-left a:last-of-type {
-  margin-bottom: 0;
+.main-left a.active {
+  margin-bottom: 20px;
   background-color: #dd0000;
   color: white;
 }
@@ -133,6 +165,17 @@ main {
   color: rgba(22, 22, 22, 0.7);
 }
 
+.view-all-btn {
+  background-color: #dd0000;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+
 footer {
   background-color: #161616;
   color: white;
@@ -163,4 +206,197 @@ footer div a {
 
 footer div a:last-of-type {
   margin-right: 0px;
+}
+
+footer .social-icons i {
+  margin-left: 10px;
+  color: white;
+}
+
+footer .social-icons i:first-of-type {
+  margin-left: 0;
+}
+
+/*=================
+Responsive Design
+==================*/
+
+/*===================
+Mobile
+===================*/
+@media only screen and (max-width: 600px) {
+  header {
+    margin: 20px 20px 30px;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .header-left {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  .header-left > div {
+    padding: 0px 80px;
+  }
+
+  .header-left h1 {
+    margin-top: 50px;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+  }
+
+  .header-left p {
+    text-overflow: ellipsis;
+    max-height: 3.6em;
+    line-height: 1.8em;
+    overflow: hidden;
+  }
+
+  .header-left .btn-container {
+    left: calc(50% - 75px);
+  }
+
+  .header-right {
+    height: 235px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-right img {
+    height: 235px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
+  }
+
+  .main-left {
+    margin-bottom: 20px;
+  }
+
+  .main-right {
+    grid-template-columns: 1fr;
+  }
+
+  footer div a {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/*====================
+Tablet
+====================*/
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  header {
+    margin: 20px 50px 30px;
+    border-radius: 10px;
+  }
+
+  .header-left {
+    padding-left: 50px;
+    width: 60%;
+  }
+
+  .header-left h1 {
+    margin-top: 50px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .header-left p {
+    text-overflow: ellipsis;
+    max-height: 3.6em;
+    line-height: 1.8em;
+    overflow: hidden;
+  }
+
+  .header-right {
+    width: 40%;
+  }
+
+  .header-right img {
+    height: 335px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
+  }
+
+  .main-left {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+
+  .main-left > div {
+    display: flex;
+  }
+
+  .main-left > div a {
+    border: 1px solid #e8e8e8;
+    margin-right: 10px;
+  }
+
+  .main-left > div a:last-of-type {
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+
+  .main-right {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .view-all-btn {
+    display: block;
+  }
+}
+
+/*========================
+Upcoming match page design
+========================*/
+.flag {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flag p {
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.single-card.match {
+  padding: 30px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  width: 312px;
+}
+
+.single-card.match h3 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.single-card.match p {
+  font-size: 16px;
+  color: #4d4d4d;
+  text-align: center;
+  margin-top: 0;
 }
